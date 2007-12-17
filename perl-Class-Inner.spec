@@ -8,7 +8,6 @@ Source0:	Class-Inner-%{version}.tar.bz2
 URL:		http://www.cpan.org
 BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Class-Inner module for perl
