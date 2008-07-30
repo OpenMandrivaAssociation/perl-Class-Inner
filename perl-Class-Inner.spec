@@ -1,7 +1,7 @@
 Summary:	Class-Inner module for perl 
 Name:		perl-Class-Inner
 Version:	0.1
-Release:	%mkrel 3
+Release:	%mkrel 5
 License:	GPL or Artistic
 Group:		Development/Perl
 Source0:	Class-Inner-%{version}.tar.bz2
