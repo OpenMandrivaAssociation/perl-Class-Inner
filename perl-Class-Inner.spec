@@ -1,7 +1,7 @@
 Summary:	Class-Inner module for perl 
 Name:		perl-Class-Inner
 Version:	0.1
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://www.cpan.org
