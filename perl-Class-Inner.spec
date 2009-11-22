@@ -1,38 +1,37 @@
+%define upstream_name    Class-Inner
+%define upstream_version 0.200001
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Class-Inner module for perl 
-Name:		perl-Class-Inner
-Version:	0.1
-Release:	%mkrel 7
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://www.cpan.org
-Source0:	Class-Inner-%{version}.tar.bz2
-Patch0:		Class-Inner-test_fix.diff
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/Class-Inner/
+Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Class-Inner module for perl
 
 %prep
-
-%setup -q -n Class-Inner-%{version} 
-%patch0 -p0
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 # perl path hack
 find . -type f | xargs perl -p -i -e "s|^#\!/usr/local/bin/perl|#\!/usr/bin/perl|g"
 
 %build
-
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
 %make OPTIMIZE="%{optflags}"
 
-make test
+%check
+%make test
 
 %install
 rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean 
