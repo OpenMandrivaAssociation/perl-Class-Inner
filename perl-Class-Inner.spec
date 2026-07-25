@@ -3,12 +3,12 @@
 
 Summary:	Class-Inner module for perl 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	18
+Version:	%{upstream_version}
+Release:	19
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/Class-Inner/
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Class-Inner
+Source0:	https://cpan.metacpan.org/authors/id/A/AR/ARUNBEAR/Class-Inner-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test::More)
