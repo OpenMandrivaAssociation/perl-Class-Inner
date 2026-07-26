@@ -1,14 +1,12 @@
 %define upstream_name    Class-Inner
-%define upstream_version 0.200001
-
 Summary:	Class-Inner module for perl 
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	19
+Version:	0.200001
+Release:	20
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Class-Inner
-Source0:	https://cpan.metacpan.org/authors/id/A/AR/ARUNBEAR/Class-Inner-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AR/ARUNBEAR/Class-Inner-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test::More)
@@ -18,7 +16,7 @@ BuildRequires:	perl-devel
 Class-Inner module for perl
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version} 
+%setup -qn %{upstream_name}-%{version} 
 
 # perl path hack
 find . -type f | xargs perl -p -i -e "s|^#\!/usr/local/bin/perl|#\!/usr/bin/perl|g"
